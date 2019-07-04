@@ -1,68 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style/main.css" />
 
     <title>User Card</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container " id="container">
+        <form class="form-inline">
+          <input
+            class="form-control mr-sm-2"
+            id="txt"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button
+            class="btn btn-outline-success my-sm-0"
+            id="search"
+            type="button"
+          >
+            Search
+          </button>
+        </form>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown"
+            >Sort <span class="caret"></span
+          ></a>
+          <ul class="dropdown-menu">
+            <li><a id="des">Descending</a></li>
+            <li><a id="asc">Ascending</a></li>
+          </ul>
+        </li>
+      </div>
+    </nav>
     <div class="container " id="container">
-        <nav class="navbar navbar-dark bg-dark">
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" id="txt" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0"  id="search" type="button">Search</button>
-            </form>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown">Sort
-                    <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a id="des">Descending</a></li>
-                    <li><a id="asc">Ascending</a></li>
-                </ul>
-            </li>
-        </nav>
-        <div class="row" id="main0">
-            <div class="card text-center col-xl-4 col-md-8 col-sm-12" id="card0">
-                <div class="card-header">
-                    <img src="" class="rounded-circle profile" id="profile0" alt="Profile Photo">
-
-                </div>
-                <div class="card-body">
-                    <hr class="my-10" id="hr0">
-                    <p class="title" id="title0"></p>
-                    <p class="info" id="info0"></p>
-                    <ul class="list-inline" id="list0">
-                        <li><img src="assets/user.png" class="user" id="user0"></li>
-                        <li><img src="assets/phone-call.png" class="phone" id="phone0" alt=""></li>
-                        <li><img src="assets/placeholder.png" class="location" id="location0" alt=""></li>
-                        <li><img src="assets/email.png" class="email" id="email0" alt=""></li>
-                        <li><img src="assets/lock.png" class="lock" id="lock0" alt=""></li>
-                        <li><img src="assets/birthday-cake.png" class="dob" id="dob0" alt=""></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="row justify-content-center text-center" id="main0">
+        <div
+          class="card text-center col-xs-12 col-sm-12 col-lg-3  m-4  p-3"
+          id="card0"
+        >
+          <div class="card-header">
+            <img
+              src=""
+              class="rounded-circle profile img-fluid"
+              id="profile0"
+              alt="Profile Photo"
+            />
+          </div>
+          <div class="card-body">
+            <hr class="my-10" id="hr0" />
+            <p class="title" id="title0"></p>
+            <p class="info" id="info0"></p>
+            <ul class="list-inline" id="list0">
+              <li><img src="assets/user.png" class="user" id="user0" /></li>
+              <li>
+                <img
+                  src="assets/phone-call.png"
+                  class="phone"
+                  id="phone0"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="assets/placeholder.png"
+                  class="location"
+                  id="location0"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img src="assets/email.png" class="email" id="email0" alt="" />
+              </li>
+              <li>
+                <img src="assets/lock.png" class="lock" id="lock0" alt="" />
+              </li>
+              <li>
+                <img
+                  src="assets/birthday-cake.png"
+                  class="dob"
+                  id="dob0"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Links JS -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/card.js"></script>
-</body>
-
+  </body>
 </html>
